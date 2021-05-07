@@ -10,7 +10,8 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import camb
 import numpy as np
 from scipy.interpolate import interp1d
-from pyfftlog.pyfftlog import pk2xi, call_transform
+#from pyfftlog.pyfftlog import pk2xi, call_transform
+from pyfftlog.pyfftlog import call_transform
 import scipy.integrate as integrate
 from intrinsic_alignments.ia_models.cosmo_utils import linear_growth_factor, mean_density, linear_power_spectrum, nonlinear_power_spectrum
 
