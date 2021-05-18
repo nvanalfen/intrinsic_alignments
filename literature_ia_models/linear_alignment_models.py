@@ -14,9 +14,9 @@ from scipy.interpolate import interp1d
 import fastpt as fpt
 import fastpt.HT as HT
 import scipy.integrate as integrate
-from intrinsic_alignments.ia_models.cosmo_utils import linear_growth_factor, mean_density, linear_power_spectrum, nonlinear_power_spectrum
+from intrinsic_alignments.literature_ia_models.cosmo_utils import linear_growth_factor, mean_density, linear_power_spectrum, nonlinear_power_spectrum
 
-from intrinsic_alignments.ia_models.cosmo_utils import default_cosmo
+from intrinsic_alignments.literature_ia_models.cosmo_utils import default_cosmo
 
 
 __author__=['Duncan Campbell']
