@@ -276,21 +276,21 @@ class NonLinearAlignmentModel(LinearAlignmentModel):
 def pk2xi_0(k, pk):
     r""" 
     """
-    (r, xi) = HT.k_to_r(k,pk_nl0,1.,-1.,0., 4.*np.pi*np.sqrt(np.pi/2.))
+    (r, xi) = HT.k_to_r(k,pk,1.,-1.,0., 4.*np.pi*np.sqrt(np.pi/2.))
     return (r, xi)
 
 
 def pk2xi_2(k, pk):
     r""" 
     """
-    (r, xi) = HT.k_to_r(k,pk_nl0,1.,-1.,2., 4.*np.pi*np.sqrt(np.pi/2.))
+    (r, xi) = HT.k_to_r(k,pk,1.,-1.,2., 4.*np.pi*np.sqrt(np.pi/2.))
     return (r, xi)
 
 
 def pk2xi_4(k, pk):
     r""" 
     """
-    (r, xi) = HT.k_to_r(k,pk_nl0,1.,-1.,4., 4.*np.pi*np.sqrt(np.pi/2.))
+    (r, xi) = HT.k_to_r(k,pk,1.,-1.,4., 4.*np.pi*np.sqrt(np.pi/2.))
     return (r, xi)
 
 
