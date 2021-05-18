@@ -11,7 +11,8 @@ import camb
 import numpy as np
 from scipy.interpolate import interp1d
 #from pyfftlog.pyfftlog import pk2xi, call_transform
-from pyfftlog.pyfftlog import call_transform
+import fastpt as fpt
+import fastpt.HT as HT
 import scipy.integrate as integrate
 from intrinsic_alignments.ia_models.cosmo_utils import linear_growth_factor, mean_density, linear_power_spectrum, nonlinear_power_spectrum
 
@@ -275,21 +276,21 @@ class NonLinearAlignmentModel(LinearAlignmentModel):
 def pk2xi_0(k, pk):
     r""" 
     """
-    (r, xi) = call_transform(0, 2, k, pk, tdir=-1)
+    (r, xi) = HT.k_to_r(k,pk_nl0,1.,-1.,0., 4.*np.pi*np.sqrt(np.pi/2.))
     return (r, xi)
 
 
 def pk2xi_2(k, pk):
     r""" 
     """
-    (r, xi) = call_transform(2, 2, k, pk, tdir=-1)
+    (r, xi) = HT.k_to_r(k,pk_nl0,1.,-1.,2., 4.*np.pi*np.sqrt(np.pi/2.))
     return (r, xi)
 
 
 def pk2xi_4(k, pk):
     r""" 
     """
-    (r, xi) = call_transform(4, 2, k, pk, tdir=-1)
+    (r, xi) = HT.k_to_r(k,pk_nl0,1.,-1.,4., 4.*np.pi*np.sqrt(np.pi/2.))
     return (r, xi)
 
 
